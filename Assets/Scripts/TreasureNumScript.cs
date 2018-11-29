@@ -15,11 +15,12 @@ public class TreasureNumScript : MonoBehaviour {
         treasureNum = GetComponentInChildren<Text>();
         unityChan = GameObject.Find("UnityChan");
         tcSctipt = unityChan.GetComponent<TreasureCountScript>();
-        treasure = tcSctipt.treasure;
     }
 	
 	// Update is called once per frame
 	void Update () {
+        treasure = tcSctipt.treasure;
+        Debug.Log(treasure);
         treasureNum.text = treasure.ToString();
     }
 }

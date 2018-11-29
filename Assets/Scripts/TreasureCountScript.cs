@@ -22,7 +22,6 @@ public class TreasureCountScript : MonoBehaviour {
         {
             treasure ++;
             Destroy(col.gameObject);
-            Debug.Log(treasure);
         }
 
     }
