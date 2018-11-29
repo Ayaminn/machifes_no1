@@ -47,11 +47,11 @@ public class CountDownTimer : MonoBehaviour
             timerText.text = minute.ToString("00") + ":" + ((int)seconds).ToString("00");
         }
         oldSeconds = seconds;
-        //　制限時間以下になったらコンソールに『制限時間終了』という文字列を表示する
+
+        //　制限時間以下になったら…
         if (totalTime <= 0f)
         {
             timeOver = true;
-            Debug.Log("制限時間終了");
         }
     }
 }

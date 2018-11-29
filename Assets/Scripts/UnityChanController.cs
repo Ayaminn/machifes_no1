@@ -25,7 +25,7 @@ public class UnityChanController : MonoBehaviour {
         else if (Input.GetKey(KeyCode.UpArrow))
         {
             //回転している方向にすすむようにちょっとややこしくしたよ
-            transform.position += transform.TransformDirection(Vector3.forward) * 0.05f;
+            transform.position += transform.TransformDirection(Vector3.forward) * 0.1f;
             animator.SetBool("walk_f", true);
             animator.SetBool("jump", false);
             animator.SetBool("walk_b", false);
@@ -57,11 +57,13 @@ public class UnityChanController : MonoBehaviour {
             transform.rotation = Quaternion.Euler(0, yrote, 0);
 
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
 
             yrote = transform.eulerAngles.y - 1;
             transform.rotation = Quaternion.Euler(0, yrote, 0);
         }
+
     }
 }
