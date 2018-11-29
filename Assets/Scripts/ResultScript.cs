@@ -17,26 +17,47 @@ public class ResultScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        gameObject.SetActive(false);
-
         result = GetComponentInChildren<Text>();
-        unityChan = GameObject.Find("UnityChan");
+        CDTscript = timer.GetComponent<CountDownTimer>();
         tcSctipt = unityChan.GetComponent<TreasureCountScript>();
 
-        CDTscript = timer.GetComponent<CountDownTimer>();
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
         treasure = tcSctipt.treasure;
-        result.text = treasure.ToString();
-
         timeOver = CDTscript.timeOver;
 
         if(timeOver == true)
         {
-            gameObject.SetActive(true);
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+
+            if(treasure < 1)
+            {
+
+                result.text = ("ざんねんでした！");
+
+            } else if(treasure < 3){
+
+                result.text = ("まだまだ だな・・・");
+
+            } else if(treasure < 5)
+            {
+                result.text = ("まあまあスゴイぞ");
+            }
+            else
+            {
+                result.text = ("すごい！かんぺきだ！");
+            }
         }
     }
 }
