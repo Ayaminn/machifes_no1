@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//textとかいじるときにかくやつ
 using UnityEngine.UI;
+//シーン遷移させるときにかくやつ
+using UnityEngine.SceneManagement;
 
 public class ResultScript : MonoBehaviour {
 
@@ -41,7 +44,12 @@ public class ResultScript : MonoBehaviour {
                 child.gameObject.SetActive(true);
             }
 
-            if(treasure < 1)
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                SceneManager.LoadScene("Main");
+            }
+
+            if (treasure < 1)
             {
 
                 result.text = ("ざんねんでした！");
