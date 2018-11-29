@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 235637726}
   - component: {fileID: 235637728}
   - component: {fileID: 235637727}
+  - component: {fileID: 235637729}
   m_Layer: 5
   m_Name: TreasureNum
   m_TagString: Untagged
@@ -325,6 +326,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 235637725}
   m_CullTransparentMesh: 0
+--- !u!114 &235637729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235637725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6470f90bf4a41b783814ec87d44e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tcSctipt: {fileID: 0}
+  unityChan: {fileID: 380495971}
 --- !u!1 &380495971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022,
