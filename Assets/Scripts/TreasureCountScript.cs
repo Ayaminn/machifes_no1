@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TreasureCountScript : MonoBehaviour {
 
+    public int treasure = 0;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,8 +20,9 @@ public class TreasureCountScript : MonoBehaviour {
 
         if(col.gameObject.tag == "Treasure")
         {
+            treasure ++;
             Destroy(col.gameObject);
-            Debug.Log("おたからみーっけ！");
+            Debug.Log(treasure);
         }
 
     }
