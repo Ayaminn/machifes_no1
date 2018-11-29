@@ -15,12 +15,11 @@ public class ResultScript : MonoBehaviour {
 
     private bool timeOver;
     private int treasure;
-    private Text result;
+    public Text result;
 
     // Use this for initialization
     void Start()
     {
-        result = GetComponentInChildren<Text>();
         CDTscript = timer.GetComponent<CountDownTimer>();
         tcSctipt = unityChan.GetComponent<TreasureCountScript>();
 
@@ -46,7 +45,7 @@ public class ResultScript : MonoBehaviour {
 
             if (Input.GetKey(KeyCode.Alpha1))
             {
-                SceneManager.LoadScene("Main");
+                SceneManager.LoadScene("Start");
             }
 
             if (treasure < 1)

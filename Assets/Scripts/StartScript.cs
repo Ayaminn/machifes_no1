@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//シーン遷移させるときにかくやつ
+using UnityEngine.SceneManagement;
 
 public class StartScript : MonoBehaviour {
 
@@ -10,7 +12,11 @@ public class StartScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene("Main");
+        }
+    }
 }
