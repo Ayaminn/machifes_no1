@@ -17,6 +17,7 @@ public class CountDownTimer : MonoBehaviour
     //　前回Update時の秒数
     private float oldSeconds;
     private Text timerText;
+    public bool timeOver = false;
 
     void Start()
     {
@@ -49,6 +50,7 @@ public class CountDownTimer : MonoBehaviour
         //　制限時間以下になったらコンソールに『制限時間終了』という文字列を表示する
         if (totalTime <= 0f)
         {
+            timeOver = true;
             Debug.Log("制限時間終了");
         }
     }
