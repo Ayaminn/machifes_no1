@@ -6,6 +6,7 @@ public class UnityChanController : MonoBehaviour {
 
     private Animator animator;
     public float yrote = 0.0f;
+    public float Speed = 0.1f;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class UnityChanController : MonoBehaviour {
         else if (Input.GetKey(KeyCode.UpArrow))
         {
             //回転している方向にすすむようにちょっとややこしくしたよ
-            transform.position += transform.TransformDirection(Vector3.forward) * 0.1f;
+            transform.position += transform.TransformDirection(Vector3.forward) * Speed;
             animator.SetBool("walk_f", true);
             animator.SetBool("jump", false);
             animator.SetBool("walk_b", false);
